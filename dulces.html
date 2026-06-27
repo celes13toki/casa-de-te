@@ -4,14 +4,45 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial scale=1.0">
         <title>Casa de té</title>
-        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.tailwindcss.com"></script>
         <link rel="shortcut icon" href="imagenes/icono.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Sunshiney&display=swap" rel="stylesheet">
-        </head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+            </style>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            'pixel': ["'Jersey 15'", 'sans-serif'],
+                            }
+                        }
+                    }
+                }
+        </script>
+    </head>
+     <!--añadir imagen de fondo para esta secciob (bg- bg-[url('imagenes/background.png')])-->  
+    <body class="font-pixel bg-cover bg-center bg-fixed text-[rgb(34,21,17)]">
+        <header class="flex items-center gap-5 justify-between p-2 bg-[rgb(127,178,115)] border-4 border-[rgb(127,178,115)] border-b-[rgb(100,145,89)]">
+            <div class="flex items-center">
+                <img src="imagenes/icono.png" alt="Taza de té hecha con pixelart" class="h-20 w-auto">
+                <h1 class="text-5xl text-[rgb(220,215,215)]">Casa de té</h1>
+            </div>
 
-    <body>
+            <nav>
+                <ul class="flex justify-between gap-8 text-xl text-[rgb(34,21,17)]">
+                    <li><a href="inicio.html" class="hover:text-[rgb(220,215,215)]">Inicio</a></li>
+                    <li><a href="teces.html" class="hover:text-[rgb(220,215,215)]">Té's</a></li>
+                    
+                    <!--lista desplegable maridaje-->
+                    <li class="relative group"><a href="maridaje.html" class="cursor-pointer hover:text-[rgb(220,215,215)]">Maridaje</a>
+                        <ul class="absolute hidden group-hover:block bg-[rgb(127,178,115)] p-2 rounded border-4 border-[rgb(127,178,115)]  border-b-[rgb(100,145,89)] border-x-[rgb(100,145,89)]">
+                            <li class="hover:text-[rgb(220,215,215)]"><a href="dulces.html">Dulces</a></li>
+                            <li class="hover:text-[rgb(220,215,215)]"><a href="salados.html">Salados</a></li>
+                        </ul>
+                    <li><a href="nosotros.html" class="hover:text-[rgb(220,215,215)]">Nosotros</a></li>
+                    </li>
+                </ul>
+            </nav>
 
-
-    </body>
+        </header>
